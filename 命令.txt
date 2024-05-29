@@ -1,0 +1,74 @@
+[] 可缺省     {}说明
+git -v --> 查看当前软件版本号 
+
+git init --> 在当前文件路径初始化仓库文件
+
+git clone （远程仓库地址） [(重命名的名称)]--> 克隆远程仓库
+
+
+
+#配置仓库
+{-global 全局引用}
+
+git config [ -global ]  user.name  (名称) --> 配置用户名
+
+git config [ -global ]  user.emial  (邮箱) --> 配置邮箱
+
+
+
+#文件操作
+git status --> 查看暂存区
+
+git add (文件名.后缀名) --> 将文件放入到暂存区
+
+git rm (文件名.后缀名) --> 将文件从暂存区移到工作区
+
+{-m 消息}
+
+git commit [ -m (操作描述) ]  --> 将暂存区的文件提交到存储区域
+
+{ --online   简短显示信息 }
+git log [ --online ] -->  查看历史记录
+
+git restore (文件名.后缀名) --> 将存储区域的文件复制粘贴到工作区域
+
+git reset --hard (版本号) --> 将最新版本号回退至指定版本 {只能查看当前版本所对应的操作信息}
+
+git revert (最新版本号) --> 将最新版本号还原至上一次的版本号,{重新提交丢失的文件，可保存最新操作信息}
+
+
+
+#分支操作
+git branch (分支名) --> 创建分支
+
+git branch -v  --> 查看所有分支
+
+git checkout  (分支名)  -->切换成指定分支
+
+git checkout -b （分支名） --> 创建并切换成指定分支
+
+git checkout -d (分支名) --> 删除指定分支
+
+git merge (分支名)  -->  合并分支
+
+
+
+#标签操作
+git tag （标签名）  (版本号)  --> 添加标签名指定版本号 { 标签名不能重复 }
+
+git checkout -b (分支名)  (标签名)  --> 创建并切换成指定分支并用标签名指定创建分支后的版本号
+
+git branch (新建的分支名)  (tag名)  --> 从指定tag的版本拉取分支
+
+
+
+#远程仓库操作
+git remote add (远程地址的名称)  （远程仓库的url）  --> 在配置文件中添加remote配置信息
+
+git remote rename (远程地址的名称)   -->  将remote重命名成指定名称
+
+git pull （远程地址的名称） --> 将远程仓库文件拉取到本地仓库
+
+git push (远程地址的名称) --> 将本地仓库推送到远程仓库
+
+ssh-keygen -t rsa -(路径)
